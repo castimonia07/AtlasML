@@ -31,18 +31,18 @@
 
 ## Tech Stack
 
-| Layer | Tools |
+| Category | Technologies & Tools |
 |---|---|
-| **Frontend** | Next.js 14, React 18, Tailwind CSS, Plotly.js |
-| **Backend** | FastAPI, SQLAlchemy, Pydantic v2, JWT Auth |
-| **Database** | PostgreSQL (Neon Serverless), SQLite (local dev) |
-| **ML — Supervised** | Scikit-Learn, XGBoost, LightGBM, CatBoost |
-| **ML — Time Series** | Statsmodels (ARIMA/SARIMA), Facebook Prophet, Scikit-Learn |
-| **ML — Unsupervised** | Scikit-Learn (KMeans, PCA, DBSCAN) |
-| **Explainability** | SHAP (TreeExplainer) |
-| **Tracking** | MLflow |
-| **Reporting** | fpdf2, Matplotlib, Seaborn |
-| **Deployment** | Docker, Render (backend), Vercel (frontend), Neon (DB) |
+| 🎨 **Frontend & UI** | Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Plotly.js, Axios |
+| ⚡ **Backend & API** | FastAPI, Uvicorn (ASGI), Pydantic v2, Pydantic-Settings |
+| 🗄️ **Database & ORM** | Neon PostgreSQL (Production), SQLite (Local Dev), SQLAlchemy 2.0 ORM |
+| 🤖 **Supervised ML** | Scikit-Learn, XGBoost, LightGBM, CatBoost |
+| 📈 **Time Series ML** | Statsmodels (ARIMA, SARIMA, ExpSmoothing), Facebook Prophet, Scikit-Learn |
+| 🧩 **Unsupervised ML** | Scikit-Learn (K-Means Clustering, PCA, DBSCAN, Silhouette Analysis) |
+| 🔬 **Explainability (XAI)** | SHAP (TreeExplainer, Feature Importance Visualizations) |
+| 📊 **Experiment Tracking** | MLflow (Run History, Metrics, Loss Curves, Model Versioning) |
+| 📄 **Export & Storage** | Joblib (Pipeline Serialization), fpdf2 (Automated PDF Report Generation) |
+| 🐳 **Infrastructure & Cloud** | Docker, Docker Compose, Render (Backend), Vercel (Frontend), Git, GitHub |
 
 ---
 
