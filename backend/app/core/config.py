@@ -19,17 +19,14 @@ class Settings(BaseSettings):
 
     MLFLOW_TRACKING_URI: str = os.getenv("MLFLOW_TRACKING_URI", "http://mlflow:5000")
 
-    CORS_ORIGINS: list = [
-        x.strip() for x in os.getenv("CORS_ORIGINS", "").split(",") if x.strip()
-    ] if os.getenv("CORS_ORIGINS") else [
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "http://localhost:3002",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:3001",
-        "http://127.0.0.1:3002",
-        "http://frontend:3000"
-    ]
+    CORS_ORIGINS_ENV: str = os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:3000,http://localhost:3001,http://localhost:3002,http://127.0.0.1:3000,http://127.0.0.1:3001,http://127.0.0.1:3002,http://frontend:3000"
+    )
+
+    @property
+    def CORS_ORIGINS(self) -> list:
+        return [x.strip() for x in self.CORS_ORIGINS_ENV.split(",") if x.strip()]
 
     class Config:
         env_file = ".env"
