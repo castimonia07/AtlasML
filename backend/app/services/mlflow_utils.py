@@ -28,7 +28,8 @@ def init_mlflow(experiment_name: str = "automl-platform"):
         print(f"MLflow server at {uri} is unreachable. Falling back to local file-based tracking...")
         local_mlflow_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "storage", "mlflow"))
         os.makedirs(local_mlflow_dir, exist_ok=True)
-        local_uri = f"file:///{local_mlflow_dir.replace('\\', '/')}"
+        local_uri_path = local_mlflow_dir.replace('\\', '/')
+        local_uri = f"file:///{local_uri_path}"
         mlflow.set_tracking_uri(local_uri)
         try:
             mlflow.set_experiment(experiment_name)
