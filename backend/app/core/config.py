@@ -2,6 +2,9 @@ import os
 from pydantic_settings import BaseSettings
 
 
+default_db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'storage', 'automl.db')).replace('\\', '/')
+
+
 class Settings(BaseSettings):
     PROJECT_NAME: str = "AtlasML"
 
@@ -9,7 +12,6 @@ class Settings(BaseSettings):
         "STORAGE_DIR", os.path.join(os.path.dirname(__file__), "..", "storage")
     )
 
-    default_db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'storage', 'automl.db')).replace('\\', '/')
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
         f"sqlite:///{default_db_path}",
