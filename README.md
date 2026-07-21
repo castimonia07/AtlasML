@@ -1,3 +1,15 @@
+---
+title: Atlasml Backend
+emoji: 📊
+colorFrom: green
+colorTo: gray
+sdk: gradio
+sdk_version: 6.20.0
+python_version: '3.12'
+app_file: app.py
+pinned: false
+---
+
 # AtlasML
 
 An end-to-end automated ML platform matching the architecture diagram: upload a
