@@ -21,12 +21,13 @@ class Settings(BaseSettings):
 
     CORS_ORIGINS_ENV: str = os.getenv(
         "CORS_ORIGINS",
-        "http://localhost:3000,http://localhost:3001,http://localhost:3002,http://127.0.0.1:3000,http://127.0.0.1:3001,http://127.0.0.1:3002,http://frontend:3000"
+        "http://localhost:3000,http://localhost:3001,http://localhost:3002,http://127.0.0.1:3000,http://127.0.0.1:3001,http://127.0.0.1:3002,http://frontend:3000,https://atlas-ml.vercel.app"
     )
 
     @property
     def CORS_ORIGINS(self) -> list:
-        return [x.strip() for x in self.CORS_ORIGINS_ENV.split(",") if x.strip()]
+        # Strip trailing slashes to prevent FastAPI CORS mismatches
+        return [x.strip().rstrip("/") for x in self.CORS_ORIGINS_ENV.split(",") if x.strip()]
 
     class Config:
         env_file = ".env"
