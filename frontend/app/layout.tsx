@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "AutoML Platform",
+  title: "AtlasML",
   description: "Upload data, get a workflow recommendation, train models, explain results.",
 };
 

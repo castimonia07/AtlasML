@@ -1,4 +1,4 @@
-# AutoML Platform
+# AtlasML
 
 An end-to-end automated ML platform matching the architecture diagram: upload a
 dataset, get a workflow recommendation, train and compare models, explain the
@@ -33,7 +33,7 @@ model support and isn't wired into a pipeline yet — see "Extending" below.
 
 ```bash
 git clone <this-repo>
-cd automl-platform
+cd AtlasML
 docker compose up --build
 ```
 

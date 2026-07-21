@@ -30,7 +30,7 @@ export default function Navbar() {
     <header className="border-b border-line bg-paper transition-colors duration-150 relative z-40">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/dashboard" className="font-display text-sm tracking-wide select-none text-ink">
-          AUTOML<span className="text-accent">/</span>PLATFORM
+          ATLAS<span className="text-accent">/</span>ML
         </Link>
 
         {/* Theme Toggler Button */}

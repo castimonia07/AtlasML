@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "AutoML Platform"
+    PROJECT_NAME: str = "AtlasML"
 
     STORAGE_DIR: str = os.getenv(
         "STORAGE_DIR", os.path.join(os.path.dirname(__file__), "..", "storage")
