@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Rishabh Pandey/risp/automl-platform/automl-platform/backend/app/storage/mlflow/697986315770978318/21a4c931bf1849ad832c2b02243a5a2d/artifacts
+end_time: 1784572234746
+entry_point_name: ''
+experiment_id: '697986315770978318'
+lifecycle_stage: active
+run_id: 21a4c931bf1849ad832c2b02243a5a2d
+run_name: linear_regression
+run_uuid: 21a4c931bf1849ad832c2b02243a5a2d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1784572234616
+status: 3
+tags: []
+user_id: Rishabh Pandey

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Rishabh Pandey/risp/automl-platform/automl-platform/backend/app/storage/mlflow/697986315770978318/45cc29f97f914141921c8c42dd4e739a/artifacts
+end_time: 1784572239766
+entry_point_name: ''
+experiment_id: '697986315770978318'
+lifecycle_stage: active
+run_id: 45cc29f97f914141921c8c42dd4e739a
+run_name: experiment-36
+run_uuid: 45cc29f97f914141921c8c42dd4e739a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1784572234490
+status: 3
+tags: []
+user_id: Rishabh Pandey

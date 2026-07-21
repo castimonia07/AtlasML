@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: 247 246 242; /* #F7F6F2 */
+  --color-ink: 18 21 27;      /* #12151B */
+  --color-accent: 59 109 92;  /* #3B6D5C */
+  --color-accent-soft: 220 232 225; /* #DCE8E1 */
+  --color-line: 222 219 209;  /* #DEDBD1 */
+  --color-card-bg: 255 255 255; /* #FFFFFF */
+}
+
+[data-theme='dark'] {
+  --color-paper: 13 17 23;    /* #0D1117 (Sleek dark background) */
+  --color-ink: 240 246 252;   /* #F0F6FC (Bright text) */
+  --color-accent: 76 217 161; /* #4CD9A1 (Emerald/Teal for dark mode contrast) */
+  --color-accent-soft: 28 43 36; /* #1C2B24 (Soft dark green tint) */
+  --color-line: 48 54 61;     /* #30363D (Dark border) */
+  --color-card-bg: 22 27 34;   /* #161B22 (Dark card elevated background) */
+}
+
+html {
+  background-color: rgb(var(--color-paper));
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body {
+  color: rgb(var(--color-ink));
+  background-color: rgb(var(--color-paper));
+}
+
+::selection {
+  background-color: rgb(var(--color-accent-soft));
+}
+
+.label-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-accent));
+}
+
+.card {
+  background: rgb(var(--color-card-bg));
+  border: 1px solid rgb(var(--color-line));
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: rgb(var(--color-accent));
+  color: rgb(var(--color-paper));
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 1.1rem;
+  border-radius: 3px;
+  transition: opacity 0.15s ease;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-secondary {
+  background: transparent;
+  color: rgb(var(--color-ink));
+  border: 1px solid rgb(var(--color-line));
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 3px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.btn-secondary:hover { border-color: rgb(var(--color-accent)); color: rgb(var(--color-accent)); }
+
+.input {
+  border: 1px solid rgb(var(--color-line));
+  background: rgb(var(--color-card-bg));
+  color: rgb(var(--color-ink));
+  border-radius: 3px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+.input:focus {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 1px;
+}
