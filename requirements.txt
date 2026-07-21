@@ -3,9 +3,9 @@ uvicorn[standard]==0.30.6
 sqlalchemy==2.0.35
 psycopg2-binary==2.9.9
 alembic==1.13.2
-pydantic==2.9.2
-pydantic-settings==2.5.2
-pydantic[email]==2.9.2
+pydantic>=2.11.10
+pydantic-settings
+pydantic[email]>=2.11.10
 python-multipart>=0.0.18
 pandas==2.2.2
 numpy==1.26.4
