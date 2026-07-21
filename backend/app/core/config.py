@@ -9,9 +9,10 @@ class Settings(BaseSettings):
         "STORAGE_DIR", os.path.join(os.path.dirname(__file__), "..", "storage")
     )
 
+    default_db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'storage', 'automl.db')).replace('\\', '/')
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        f"sqlite:///{os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'storage', 'automl.db')).replace('\\', '/')}",
+        f"sqlite:///{default_db_path}",
     )
 
     MLFLOW_TRACKING_URI: str = os.getenv("MLFLOW_TRACKING_URI", "http://mlflow:5000")
